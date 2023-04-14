@@ -1,0 +1,30 @@
+function [] = text_to_speech(final_output)
+
+file = fopen('number_Plate.txt', 'wt');
+fprintf(file,'%s\n',final_output);
+fclose(file);                     
+winopen('number_Plate.txt')
+    
+    
+    
+    % Program to do text to speech.
+% Get user's sentence
+% userPrompt = 'What do you want the computer to say?';
+% titleBar = 'Text to Speech';
+userPrompt = 'What do you want the computer to say?';
+titleBar = 'Text to Speech';
+
+defaultString=final_output;
+caUserInput = inputdlg(userPrompt, titleBar, 1, {defaultString});
+if isempty(caUserInput)
+	return;
+end; % Bail out if they clicked Cancel.
+caUserInput = char(caUserInput); % Convert from cell to string.
+NET.addAssembly('System.Speech');
+obj = System.Speech.Synthesis.SpeechSynthesizer;
+obj.Volume = 100;
+Speak(obj, caUserInput);
+
+
+
+end
