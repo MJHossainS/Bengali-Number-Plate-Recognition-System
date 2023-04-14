@@ -1,6 +1,5 @@
 # Bengali-Number-Plate-Recognition-System
 
-# Number Plate Recognition System
 
 This MATLAB-based number plate recognition system detects and recognizes characters from a vehicle's number plate. The system processes images of vehicles, detects the number plate region, segments the characters, recognizes the individual characters, and performs text-to-speech conversion of the recognized number plate.
 
