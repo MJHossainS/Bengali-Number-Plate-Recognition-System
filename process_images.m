@@ -1,27 +1,48 @@
 function [] = process_images(im)
+    % Convert the RGB image to grayscale
     imgray = rgb2gray(im);
-    figure
+
+    % Display the grayscale image in a new figure 
+    figure;
     imshow(imgray);
-    title('gray image');
-    %pause(2);
+    title('gray image');  % Set the title of the figure
+
+    % Binarize the grayscale image 
     imbin = imbinarize(imgray);
-    figure
+
+    % Display the binarized image in a new figure
+    figure;
     imshow(imbin);
     title('binarized image');
-    %pause(2);
+
+    % Apply the Sobel edge detection algorithm to the grayscale image
     im = edge(imgray, 'sobel');
-    figure
+
+    % Display the Sobel edge-detected image
+    figure;
     imshow(im);
     title('sobel image');
-    %pause(2);
 
+    % Dilate the edges in the image a diamond-shaped structuring element
     im = imdilate(im, strel('diamond', 2));
+
+    % Fill any holes in the image using the 'imfill' function
     im = imfill(im, 'holes');
+
+    % Erode the image using the 'imerode' function with a diamond-shaped structuring element
     im = imerode(im, strel('diamond', 10));
-    figure
-    imshow(im);
-    title('eroison image');
+    
     %pause(2);
+    
+    
+    % Display the eroded image
+    figure;
+    imshow(im);
+    title('erosion image');
+
+    % Get the bounding box of the largest connected component in the image
     boundingBox = get_max_area_bounding_box(im);
-    process_and_segment_number_plate(imbin, boundingBox);
+
+    % Process and segment the number plate using the binarized image and the bounding box 
+    process_and_segment_number_plate(imbin, boundingBox);    
 end
