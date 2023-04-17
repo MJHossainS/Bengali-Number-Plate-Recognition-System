@@ -16,7 +16,7 @@ The number plate recognition system consists of four primary functions:
 
 1. Clone this repository to your local machine.
 2. Make sure you have MATLAB installed on your system.
-3. Load the desired image file into the `process_images` function and run the script.
+3. Run the script and Load the desired image file into the `main.m`.
 
 ## Dependencies
 
