@@ -1,7 +1,7 @@
 # Publication link : 
 Hossain, Mohammad Jaber, Md Hasan Uzzaman, and A. S. Saif. "Bangla digital number plate recognition using template matching for higher accuracy and less time complexity." International Journal of Computer Applications 975 (2018): 8887.
 
-https://www.researchgate.net/profile/Saifuddin-Saif-3/publication/328969094_Bangla_Digital_Number_Plate_Recognition_using_Template_Matching_for_Higher_Accuracy_and_Less_Time_Complexity/links/5bee0cc04585150b2bba0dde/Bangla-Digital-Number-Plate-Recognition-using-Template-Matching-for-Higher-Accuracy-and-Less-Time-Complexity.pdf
+https://www.ijcaonline.org/archives/volume181/number29/30124-30124-2018918140
 
 
 # Bengali-Number-Plate-Recognition-System
